@@ -1,5 +1,5 @@
 import React from 'react';
-import AliceCarousel from 'react-alice-carousel';
+import AliceCarousel, { AutoplayDirection, AutoPlayStrategy } from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { mainCrouseldata } from './MainCarouselData';
 const MainCarousel = () => {
@@ -9,7 +9,15 @@ const MainCarousel = () => {
    return (      
 
       <AliceCarousel
-       items={items}/>
+       items={items}
+       
+       disableButtonsControls
+       autoPlay
+       autoPlayInterval={1000}
+       infinite
+
+       />
+       
    )
 
 }
